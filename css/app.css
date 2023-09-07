@@ -1,0 +1,97 @@
+/* RESET */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+}
+
+/* APP LAYOUT */
+
+#app {
+    height: 100vh;
+    background: black;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+}  
+
+.content {
+    overflow: auto;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+
+
+/* MAIN */
+
+.content {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.view-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    gap: 8px;
+}
+
+.call-screen {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.participant {
+    width: 200px;
+    aspect-ratio: 16 / 9;
+    position: relative;
+}  
+
+.overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+}
+
+/* ASIDE */
+
+.interactions {
+    gap: 20px;
+}
+
+
+/* DEBUG */
+
+.debug #app * {
+    padding: 10px;
+    border: 1px solid white;
+}
+
+.debug .content {
+    background-color: rgb(23, 26, 24);
+}
+
+.debug .toolbar {
+    background-color: rgb(55, 55, 66);
+}
+
