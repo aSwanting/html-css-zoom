@@ -10,13 +10,18 @@ html {
     font-family: 'Lato', sans-serif;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
 /* APP LAYOUT */
 
 #app {
     height: 100vh;
     background: black;
     color: white;
-    text-align: center;
+    display: flex;
     flex-direction: column;
     overflow: hidden;
 }
@@ -41,10 +46,16 @@ html {
 
 /* MAIN */
 
+.main-window {
+    max-height: 90%;
+    overflow: auto;
+}
+
 .content {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    padding: 20px;
 }
 
 .view-buttons {
@@ -52,6 +63,7 @@ html {
     top: 0;
     right: 0;
     gap: 8px;
+    padding: 20px;
 }
 
 .call-screen {
@@ -60,38 +72,125 @@ html {
     gap: 10px;
 }
 
-.participant {
-    width: 200px;
-    aspect-ratio: 16 / 9;
+.participant, .myself {
+    cursor: pointer;
     position: relative;
+    outline: 1px solid rgb(124, 124, 124);
 }  
 
-.overlay {
+.myself {
+    outline: 1px solid rgb(156, 209, 106);
+}
+
+.participant:hover {
+    outline: 2px solid rgb(124, 124, 124);
+}
+
+.myself:hover {
+    outline: 2px solid rgb(156, 209, 106);
+}
+
+.participant img {
+    width: 250px;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.participant-overlay {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    line-height: 25px;
+    padding-inline: 4px 6px;
+    gap: 6px;
+}
+
+.participant-mic-off, .participant-mic-on {
+    width: 20px;
+    text-align: center;
+}
+
+.participant-mic-on {
+    position: absolute;
+    opacity: 0;
+}
+
+.participant-overlay:hover .participant-mic-off {
+    opacity: 0;
+}
+
+.participant-overlay:hover .participant-mic-on {
+    opacity: 1;
 }
 
 /* ASIDE */
 
-.interactions {
+.toolbar {
+    
+    padding: 50px;
+}
+
+.toolbar .flex {
     gap: 20px;
 }
+
+/* .interactions {
+    gap: 20px;
+} */
 
 
 /* DEBUG */
 
-.debug #app * {
+/* .debug #app * {
     padding: 10px;
     border: 1px solid white;
-}
+} */
 
+/* .debug .call-screen,
+.debug .view-buttons div {
+    padding: 10px;
+    border: 1px solid white;
+} */
+
+
+/* .debug .participant {
+
+    border: 1px solid rgb(144, 255, 144);
+}
+ */
 .debug .content {
-    background-color: rgb(23, 26, 24);
+    background-color: rgb(7, 7, 7);
 }
 
 .debug .toolbar {
-    background-color: rgb(55, 55, 66);
+    background-color: rgb(55, 55, 55);
 }
 
+
+/* .debug .toolbar,
+.debug .toolbar * {
+    padding: 0 10px;
+    border: 1px solid white;
+} */
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(55, 55, 55, 0.2);
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(55, 55, 55);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(65, 65, 65);
+  }
