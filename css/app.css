@@ -151,6 +151,7 @@ img {
 .audio-video,
 .interactions {
 padding-block: 10px;
+gap: 10px;
 
 } 
 
@@ -173,9 +174,10 @@ padding-block: 10px;
 .toolbar-mic-off,
 .toolbar-cam-on,
 .toolbar-cam-off {
-    width: 80px;
+    width: 100px;
     height: 50px;
-    padding: 8px;
+    padding-block: 8px;
+    padding-inline: 5px 15px;
     border-radius: 8px;
 }
 
@@ -194,6 +196,19 @@ padding-block: 10px;
     left: 0;
 }
 
+.expand-arrow {
+    position: absolute;
+    font-size: 10px;
+    top: 10px;
+    right: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.expand-arrow:hover {
+    background-color: rgb(119, 119, 119);
+}
+
 .toolbar-mic-off .mic-icon,
 .toolbar-cam-off .cam-icon {
 color: red;
@@ -204,10 +219,6 @@ color: red;
     opacity: 1;
 }
 
-.interactions {
-    gap: 10px;
-} 
-
 .icon-frame {
     height: 50px;
     padding: 8px;
@@ -216,6 +227,12 @@ color: red;
 
 .green {
     color: rgb(38, 221, 38);
+}
+
+.expand {
+    position: relative;
+    width: 100px;
+    padding-right: 20px;
 }
 
 .icon-frame:hover {
