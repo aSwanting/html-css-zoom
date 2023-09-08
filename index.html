@@ -358,7 +358,10 @@
             
             <div class="audio-video flex">
 
-                <div class="toolbar-mic">
+                <input type="checkbox" id="mic-toggle">
+
+                <label for="mic-toggle">
+                <div class="toolbar-mic">                    
 
                     <div class="toolbar-mic-on">
                         <i class="fa-solid fa-microphone mic-icon"></i>
@@ -373,7 +376,11 @@
                     </div>                 
 
                 </div> 
+                </label>
 
+                <input type="checkbox" id="cam-toggle">
+
+                <label for="cam-toggle">
                 <div class="toolbar-cam">
 
                     <div class="toolbar-cam-on">
@@ -389,13 +396,14 @@
                     </div> 
 
                 </div> 
+                </label>
 
             </div>
 
             <div class="interactions flex">
 
                 <div class="icon-frame">
-                    <i class="fa-solid fa-user-plus icon"></i>
+                    <i class="fa-solid fa-user-plus icon add-user"></i>
                     <p>Invite</p>
                 </div>
 

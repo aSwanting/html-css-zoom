@@ -150,14 +150,12 @@ img {
 
 .audio-video,
 .interactions {
-padding-block: 10px;
-gap: 10px;
-
+    padding-block: 10px;
+    gap: 3px;
 } 
 
 .toolbar {    
     background-color: rgb(46, 46, 48);
-    /* padding: 10px; */
     font-size: 12px;
     text-align: center;
     flex-shrink: 0;
@@ -174,11 +172,17 @@ gap: 10px;
 .toolbar-mic-off,
 .toolbar-cam-on,
 .toolbar-cam-off {
-    width: 100px;
+    width: 65px;
     height: 50px;
     padding-block: 8px;
-    padding-inline: 5px 15px;
+    padding-inline: 0px 15px;
     border-radius: 8px;
+}
+
+.toolbar-cam-on,
+.toolbar-cam-off {
+    padding-left: 5px;
+    width: 80px;
 }
 
 .toolbar-mic,
@@ -187,20 +191,34 @@ gap: 10px;
     cursor: pointer;
 }
 
+.toolbar-mic {
+    margin-left: 5px;
+}
+
 .toolbar-mic-off,
 .toolbar-cam-off {
     position: absolute;
     background-color: rgb(62, 62, 65);
-    opacity: 0;
+    display: none;
     top: 0;
     left: 0;
+}
+
+.toolbar-mic-off .mic-icon,
+.toolbar-cam-off .cam-icon {
+    color: red;
+}
+
+.toolbar-mic:hover .toolbar-mic-on,
+.toolbar-cam:hover .toolbar-cam-on {
+    background-color: rgb(62, 62, 65);
 }
 
 .expand-arrow {
     position: absolute;
     font-size: 10px;
     top: 10px;
-    right: 5px;
+    right: 2px;
     padding: 5px;
     border-radius: 5px;
 }
@@ -209,21 +227,26 @@ gap: 10px;
     background-color: rgb(119, 119, 119);
 }
 
-.toolbar-mic-off .mic-icon,
-.toolbar-cam-off .cam-icon {
-color: red;
-}
 
-.toolbar-mic-off:hover,
-.toolbar-cam-off:hover {
-    opacity: 1;
+ #mic-toggle, #cam-toggle {
+    display: none;
+ }
+
+#mic-toggle:checked ~ label .toolbar-mic .toolbar-mic-off,
+#cam-toggle:checked ~ label .toolbar-cam .toolbar-cam-off {
+    display: initial;
 }
 
 .icon-frame {
     height: 50px;
     padding: 8px;
     border-radius: 8px;
+    cursor: pointer;
 }  
+
+.add-user {
+    transform: translateX(4px);
+}
 
 .green {
     color: rgb(38, 221, 38);
@@ -231,8 +254,12 @@ color: red;
 
 .expand {
     position: relative;
-    width: 100px;
-    padding-right: 20px;
+    width: 90px;
+    padding-right: 10px;
+}
+
+.icon-frame .expand-arrow {
+    right: 8px;
 }
 
 .icon-frame:hover {
