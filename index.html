@@ -19,8 +19,12 @@
             
             <div class="view-buttons flex">
 
-                <div class="speaker-view">speaker</div>
-                <div class="full-screen">full screen</div>
+                <div class="speaker-view flex">
+                    <i class="fa-solid fa-grip speaker-view-icon"></i>
+                    <div>Speaker View</div>
+                </div>
+
+                <div class="maximize-icon"><i class="fa-solid fa-maximize"></i></div>
 
             </div>
 
@@ -354,25 +358,83 @@
             
             <div class="audio-video flex">
 
-                <div>audio</div> 
-                <div>video</div>
+                <div class="toolbar-mic">
+
+                    <div class="toolbar-mic-on">
+                        <i class="fa-solid fa-microphone mic-icon"></i>
+                        <p>Mute</p>
+                    </div>
+
+               <div class="toolbar-mic-off">
+                        <i class="fa-solid fa-microphone-slash mic-icon"></i>
+                        <p>Unmute</p>
+                    </div>      
+
+                </div> 
+
+                <div class="toolbar-cam">
+
+                    <div class="toolbar-cam-on">
+                        <i class="fa-solid fa-video cam-icon"></i>
+                        <p>Stop Video</p>
+                    </div>
+
+               <div class="toolbar-cam-off">
+                        <i class="fa-solid fa-video-slash cam-icon"></i>
+                        <p>Start Video</p>
+                    </div> 
+
+                </div> 
 
             </div>
 
-            <div class="interactions flex space-between">
+            <div class="interactions flex">
 
-                <div>Invite</div>
-                <div>Manage Participants</div>
-                <div>Polling</div>
-                <div>Share Screen</div>
-                <div>Chat</div>
-                <div>Record</div>
-                <div>Breakout Rooms</div>
-                <div>More</div>
+                <div class="icon-frame">
+                    <i class="fa-solid fa-user-plus icon"></i>
+                    <p>Invite</p>
+                </div>
+
+                <div class="icon-frame">
+                    <i class="fa-solid fa-user-group icon"></i>
+                    <p>Manage Participants</p>
+                </div>
+
+                <div class="icon-frame">
+                    <i class="fa-solid fa-chart-column icon"></i>
+                    <p>Polling</p>
+                </div>
+
+                <div class="icon-frame">
+                    <i class="fa-solid fa-share-from-square icon green"></i>
+                    <p>Share Screen</p>
+                </div>
+
+                <div class="icon-frame">
+                    <i class="fa-solid fa-comment icon"></i>
+                    <p>Chat</p>
+                </div>
+
+                <div class="icon-frame">
+                    <i class="fa-solid fa-record-vinyl icon"></i>
+                    <p>Record</p>
+                </div>
+
+                <div class="icon-frame">
+                    <i class="fa-solid fa-table-cells-large icon"></i>
+                    <p>Breakout Rooms</p>
+                </div>
+
+                <div class="icon-frame">
+                    <i class="fa-solid fa-ellipsis icon"></i>
+                    <p>More</p>
+                </div>
 
             </div>
 
-            <div class="end-call">End Call</div>
+            <div class="end-meeting flex">
+                <p>End Meeting</p>
+            </div>
 
         </aside>
 

@@ -43,7 +43,6 @@ img {
 }
 
 
-
 /* MAIN */
 
 .main-window {
@@ -125,72 +124,135 @@ img {
     opacity: 1;
 }
 
+.speaker-view, .maximize-icon {
+    background-color: rgb(109, 109, 109);
+    padding-inline: 8px;
+    border-radius: 5px;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.speaker-view-icon {
+    font-size: 16px;
+}
+
+.speaker-view:hover,
+.maximize-icon:hover {
+    color: rgb(63, 63, 63);
+    background-color: rgb(197, 197, 197);
+}
+
+
 /* ASIDE */
 
-.toolbar {
-    
-    padding: 50px;
+.audio-video,
+.interactions {
+padding-block: 10px;
+
+} 
+
+.toolbar {    
+    background-color: rgb(46, 46, 48);
+    /* padding: 10px; */
+    font-size: 12px;
+    text-align: center;
+    flex-shrink: 0;
 }
 
-.toolbar .flex {
-    gap: 20px;
+.toolbar .mic-icon,
+.toolbar .cam-icon,
+.interactions .icon {
+    font-size: 20px;
+    padding-bottom: 5px;
 }
 
-/* .interactions {
-    gap: 20px;
-} */
-
-
-/* DEBUG */
-
-/* .debug #app * {
-    padding: 10px;
-    border: 1px solid white;
-} */
-
-/* .debug .call-screen,
-.debug .view-buttons div {
-    padding: 10px;
-    border: 1px solid white;
-} */
-
-
-/* .debug .participant {
-
-    border: 1px solid rgb(144, 255, 144);
-}
- */
-.debug .content {
-    background-color: rgb(7, 7, 7);
+.toolbar-mic-on,
+.toolbar-mic-off,
+.toolbar-cam-on,
+.toolbar-cam-off {
+    width: 80px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 8px;
 }
 
-.debug .toolbar {
-    background-color: rgb(55, 55, 55);
+.toolbar-mic,
+.toolbar-cam {
+    position: relative;
+    cursor: pointer;
 }
 
+.toolbar-mic-off,
+.toolbar-cam-off {
+    position: absolute;
+    background-color: rgb(62, 62, 65);
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
 
-/* .debug .toolbar,
-.debug .toolbar * {
-    padding: 0 10px;
-    border: 1px solid white;
-} */
+.toolbar-mic-off .mic-icon,
+.toolbar-cam-off .cam-icon {
+color: red;
+}
 
-/* width */
+.toolbar-mic-off:hover,
+.toolbar-cam-off:hover {
+    opacity: 1;
+}
+
+.interactions {
+    gap: 10px;
+} 
+
+.icon-frame {
+    height: 50px;
+    padding: 8px;
+    border-radius: 8px;
+}  
+
+.green {
+    color: rgb(38, 221, 38);
+}
+
+.icon-frame:hover {
+    background-color: rgb(62, 62, 65);
+}
+
+.end-meeting {
+    background-color: rgb(107, 103, 103);
+    color: rgb(148, 14, 14);
+    align-items: center;
+    padding-inline: 20px;
+    font-weight: 900;
+    font-size: 14px;
+    transition: all 200ms;
+    cursor: pointer;
+}
+
+.end-meeting:hover {
+    background-color: rgb(148, 14, 14);
+    color: rgb(107, 103, 103);
+}
+
+/* SCROLLBAR */
+
 ::-webkit-scrollbar {
     width: 15px;
-  }
+}
   
-  /* Track */
   ::-webkit-scrollbar-track {
     background: rgb(55, 55, 55, 0.2);
-  }
+}
    
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: rgb(55, 55, 55);
-  }
+}
   
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(65, 65, 65);
-  }
+}
+
