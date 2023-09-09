@@ -146,7 +146,7 @@ img {
 }
 
 
-/* ASIDE */
+/* FOOTER */
 
 .audio-video,
 .interactions {
@@ -173,7 +173,7 @@ img {
 .toolbar-cam-on,
 .toolbar-cam-off {
     width: 65px;
-    height: 50px;
+    /* height: 50px; */
     padding-block: 8px;
     padding-inline: 0px 15px;
     border-radius: 8px;
@@ -238,7 +238,7 @@ img {
 }
 
 .icon-frame {
-    height: 50px;
+    /* height: 50px; */
     padding: 8px;
     border-radius: 8px;
     cursor: pointer;
